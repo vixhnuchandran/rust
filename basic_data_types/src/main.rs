@@ -41,13 +41,6 @@ fn main() {
     // Slices: references to a part of an array
     let slice_of_array: &[i32] = &integer_array[1..]; // Slice from second element onward
 
-    // Option type: value may be Some(T) or None
-    let some_value: Option<i32> = Some(10);
-    let none_value: Option<i32> = None;
-
-    // Result type: Ok(T) for success, Err(E) for errors
-    let result_value: Result<i32, &str> = Ok(200);
-    let error_value: Result<i32, &str> = Err("An error occurred");
 
     // Printing out all the values
     println!("Signed 8-bit: {}", signed_8_bit);
@@ -77,16 +70,6 @@ fn main() {
 
     println!("Slice of array: {:?}", slice_of_array);
 
-    println!("Some value: {:?}", some_value);
-    println!("None value: {:?}", none_value);
 
-    match result_value {
-        Ok(val) => println!("Result value: {}", val),
-        Err(e) => println!("Error: {}", e),
-    }
 
-    match error_value {
-        Ok(val) => println!("Result value: {}", val),
-        Err(e) => println!("Error: {}", e),
-    }
 }
